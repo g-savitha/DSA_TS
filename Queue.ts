@@ -26,13 +26,13 @@ export default class Queue<T> {
         if (!this.head) {
             return undefined;
         }
-        //standard book keeping, coz length reduces once we delete
+        //standard book keeping
         this.length--;
 
         const head = this.head;
         this.head = this.head.next;
 
-        //free the memory, delete the unnecessary pointer
+        //free the unused memory
         head.next = undefined;
 
         if (this.length === 0) {
