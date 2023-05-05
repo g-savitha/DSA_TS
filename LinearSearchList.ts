@@ -1,5 +1,3 @@
-import { isFunctionDeclaration } from "typescript";
-
 export default function linear_search(
     haystack: number[],
     needle: number,
